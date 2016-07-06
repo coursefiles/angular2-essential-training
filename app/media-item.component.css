@@ -35,6 +35,15 @@ h2 {
     height: 24px;
     fill: #bdc2c5;
 }
+.favorite.is-favorite {
+    fill: #37ad79;
+}
+.favorite.is-favorite-hovering {
+    fill: #45bf94;
+}
+.favorite.is-favorite.is-favorite-hovering {
+    fill: #ec4342;
+}
 .delete {
     display: block;
     background-color: #ec4342;
