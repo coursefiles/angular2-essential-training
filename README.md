@@ -23,7 +23,7 @@ Topics include:
 1. Make sure you have these installed
   - [node.js](http://nodejs.org/)
   - [git](http://git-scm.com/)
-  - [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
+
 2. Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) 
 
     `git clone https://github.com/LyndaExerciseFiles/angular2-essential-training.git`
@@ -36,9 +36,15 @@ Topics include:
 
     `npm install`
     
-5. Run the Gulp command to build the code, watch for file changes, and serve up the site locally:
+5. Run the npm start command to build the code, watch for file changes, and serve up the site locally:
 
-    `gulp`
+    `npm start`
+
+Note that the site will run using `lite-server` and will be served up at the following local address:  
+    http://localhost:3000
+
+*If you use a code editor that launches its own web server please note that it may run on a different port number. 
+You will want to use `npm start` for this project.*
   
 ## More Stuff
 Check out some of my [other courses on lynda.com](https://lynda.com/justinschwartzenberger). 
