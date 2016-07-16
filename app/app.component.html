@@ -1,11 +1,11 @@
 <nav>
-    <a>
+    <a [routerLink]="['./List', { medium: '' }]">
         <img src="media/04.png" class="icon" />
     </a>
-    <a>
+    <a [routerLink]="['./List', { medium: 'Movies' }]">
         <img src="media/03.png" class="icon" />
     </a>
-    <a>
+    <a [routerLink]="['./List', { medium: 'Series' }]">
         <img src="media/02.png" class="icon" />
     </a>
 </nav>

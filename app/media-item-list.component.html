@@ -10,7 +10,7 @@
         [ngClass]="{'medium-movies': mediaItem.medium === 'Movies', 'medium-series': mediaItem.medium === 'Series'}"></media-item>
 </section>
 <footer>
-    <a>
+    <a [routerLink]="['../AddMediaItem']">
         <img src="media/01.png" class="icon" />
     </a>
 </footer>

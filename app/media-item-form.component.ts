@@ -38,6 +38,8 @@ export class MediaItemFormComponent {
 
     onSubmit(mediaItem) {
         this.mediaItemService.add(mediaItem)
-            .subscribe();
+            .subscribe(() => {
+                
+            });
     }
 }
