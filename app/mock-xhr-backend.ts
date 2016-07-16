@@ -12,12 +12,8 @@ export class MockXHRBackend {
             var responseOptions;
             switch (request.method) {
                 case RequestMethod.Get:
-                    if (request.url.indexOf('mediaitems?medium=') >= 0 || request.url === 'mediaitems') {
-                        var medium;
-                        if (request.url.indexOf('?') >= 0) {
-                            medium = request.url.split('=')[1];
-                            if (medium === 'undefined') medium = '';
-                        }
+                    if (request.url.indexOf('mediaitems?medium=') >= 0) {
+                        var medium = request.url.split('=')[1];
                         var mediaItems;
                         if (medium) {
                             mediaItems = this._mediaItems.filter(mediaItem => mediaItem.medium === medium);
