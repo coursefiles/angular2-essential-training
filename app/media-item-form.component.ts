@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, Inject} from 'angular2/core';
 import {Control, Validators, FormBuilder} from 'angular2/common';
 import {MediaItemService} from './media-item.service';
 
@@ -11,7 +11,8 @@ export class MediaItemFormComponent {
     form;
     
     constructor(private formBuilder: FormBuilder,
-        private mediaItemService: MediaItemService) {}
+        private mediaItemService: MediaItemService,
+        @Inject('LOOKUP_LISTS') public lookupLists) {}
 
     ngOnInit() {
         this.form = this.formBuilder.group({
