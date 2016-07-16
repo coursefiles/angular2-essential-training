@@ -2,6 +2,7 @@ import {Component, Inject} from 'angular2/core';
 import {Control, Validators, FormBuilder} from 'angular2/common';
 import {MediaItemService} from './media-item.service';
 import {LOOKUP_LISTS} from './providers';
+import {Router} from 'angular2/router';
 
 @Component({
     selector: 'media-item-form',
@@ -13,7 +14,8 @@ export class MediaItemFormComponent {
     
     constructor(private formBuilder: FormBuilder,
         private mediaItemService: MediaItemService,
-        @Inject(LOOKUP_LISTS) public lookupLists) {}
+        @Inject(LOOKUP_LISTS) public lookupLists,
+        private router: Router) {}
 
     ngOnInit() {
         this.form = this.formBuilder.group({
@@ -39,7 +41,7 @@ export class MediaItemFormComponent {
     onSubmit(mediaItem) {
         this.mediaItemService.add(mediaItem)
             .subscribe(() => {
-                
+                this.router.navigate(['../List', { medium: mediaItem.medium }]);
             });
     }
 }
