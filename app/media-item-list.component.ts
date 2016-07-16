@@ -8,7 +8,7 @@ import {MediaItemComponent} from './media-item.component';
     styleUrls: ['app/media-item-list.component.css']
 })
 export class MediaItemListComponent {
-    
+
     onMediaItemDeleted(mediaItem) {
     }
     
