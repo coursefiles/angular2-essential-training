@@ -4,7 +4,6 @@ import {MediaItemService} from './media-item.service';
 
 @Component({
     selector: 'media-item-form',
-    providers: [MediaItemService],
     templateUrl: 'app/media-item-form.component.html',
     styleUrls: ['app/media-item-form.component.css']
 })
