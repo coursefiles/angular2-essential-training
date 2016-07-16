@@ -1,6 +1,16 @@
+import {Injectable} from 'angular2/core';
+import {Http} from 'angular2/http';
+import 'rxjs/add/operator/map';
+
+@Injectable()
 export class MediaItemService {
+    constructor(private http: Http) {}
+    
     get() {
-        return this.mediaItems;
+        return this.http.get('mediaitems')
+            .map(response => {
+                return response.json().mediaItems;
+            });
     }
     
     add(mediaItem) {
