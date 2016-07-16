@@ -1,5 +1,5 @@
 import {Injectable} from 'angular2/core';
-import {Http, URLSearchParams} from 'angular2/http';
+import {Http, URLSearchParams, Headers} from 'angular2/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -16,14 +16,14 @@ export class MediaItemService {
     }
     
     add(mediaItem) {
-        this.mediaItems.push(mediaItem);
+        var headers = new Headers({ 'Content-Type': 'application/json' });
+        return this.http.post('mediaitems', JSON.stringify(mediaItem), { headers: headers })
+            .map(response => {});
     }
     
     delete(mediaItem) {
-        var index = this.mediaItems.indexOf(mediaItem);
-        if (index >= 0) {
-            this.mediaItems.splice(index, 1);
-        }
+        return this.http.delete(`mediaitems/${mediaItem.id}`)
+            .map(response => {});
     }
     
     mediaItems = [
