@@ -24,10 +24,10 @@ export class MediaItemFormComponent {
     yearValidator(control) {
         if (control.value.trim().length === 0) return null;
         var year = parseInt(control.value);
-        var minYear = 1900;
-        var maxYear = 2100;
+        var minYear = 1800;
+        var maxYear = 2500;
         if (year >= minYear && year <= maxYear) return null;
-        return {'year': true};
+        return {'year': { 'min': minYear, 'max': maxYear }};
     }
 
     onSubmit(mediaItem) {

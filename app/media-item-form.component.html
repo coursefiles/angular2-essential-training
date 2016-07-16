@@ -14,7 +14,11 @@
         <li>
             <label for="name">Name</label>
             <input type="text" name="name" id="name" required
-                ngControl="name">
+                ngControl="name"
+                #name="ngForm">
+            <div *ngIf="name.errors?.pattern" class="error">
+                name has invalid characters
+            </div>
         </li>
         <li>
             <label for="category">Category</label>
@@ -31,7 +35,11 @@
         <li>
             <label for="year">Year</label>
             <input type="text" name="year" id="year" maxlength="4"
-                ngControl="year">
+                ngControl="year"
+                #year="ngForm">
+            <div *ngIf="year.errors?.year" class="error">
+                must be between {{year.errors?.year.min}} and {{year.errors?.year.max}}
+            </div>
         </li>
     </ul>
     <button type="submit" [disabled]="!form.valid">Save</button>
