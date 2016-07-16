@@ -1,13 +1,15 @@
 import {Injectable} from 'angular2/core';
-import {Http} from 'angular2/http';
+import {Http, URLSearchParams} from 'angular2/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class MediaItemService {
     constructor(private http: Http) {}
     
-    get() {
-        return this.http.get('mediaitems')
+    get(medium) {
+        var searchParams = new URLSearchParams();
+        searchParams.append('medium', medium);
+        return this.http.get('mediaitems', {search: searchParams})
             .map(response => {
                 return response.json().mediaItems;
             });
