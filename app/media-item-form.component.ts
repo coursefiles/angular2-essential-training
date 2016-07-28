@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {ControlGroup, Control} from 'angular2/common';
+import { Component } from '@angular/core';
+import { FormGroup, FormControl} from '@angular/forms';
 
 @Component({
     selector: 'media-item-form',
@@ -7,14 +7,14 @@ import {ControlGroup, Control} from 'angular2/common';
     styleUrls: ['app/media-item-form.component.css']
 })
 export class MediaItemFormComponent {
-    form;
+    form: FormGroup;
 
     ngOnInit() {
-        this.form = new ControlGroup({
-            'medium': new Control('Movies'),
-            'name': new Control(''),
-            'category': new Control(''),
-            'year': new Control('')
+        this.form = new FormGroup({
+            'medium': new FormControl('Movies'),
+            'name': new FormControl(''),
+            'category': new FormControl(''),
+            'year': new FormControl('')
         });
     }
 
