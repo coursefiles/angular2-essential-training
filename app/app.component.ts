@@ -1,5 +1,6 @@
-import {Component} from 'angular2/core';
-import {MediaItemListComponent} from './media-item-list.component';
+import { Component } from '@angular/core';
+
+import { MediaItemListComponent } from './media-item-list.component';
 import {MediaItemFormComponent} from './media-item-form.component';
 
 @Component({
