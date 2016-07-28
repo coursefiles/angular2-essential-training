@@ -15,7 +15,7 @@
             <label for="name">Name</label>
             <input type="text" name="name" id="name" required
                 formControlName="name">
-            <div *ngIf="form.controls.name.erro            <div *ngIf="name.errors?.pattern" class="error">
+            <div *ngIf="form.controls.name.errors?.pattern" class="error">
                 name has invalid characters
             </div>
         </li>
@@ -32,12 +32,11 @@
             </select>
         </li>
         <li>
-            <label for="year">Yea"text" name="year" id="year" maxlength="4"
-      ">
-                ngContrform.controls.ol="year"
-                #year="ngForm">
- form.controls.           <div form.controls.*ngIf="year.errors?.year" class="error">
-                must be between {{year.errors?.year.min}} and {{year.errors?.year.max}}
+            <label for="year">Year</label>
+            <input type="text" name="year" id="year" maxlength="4"
+                formControlName="year">
+            <div *ngIf="form.controls.year.errors?.year" class="error">
+                must be between {{form.controls.year.errors?.year.min}} and {{form.controls.year.errors?.year.max}}
             </div>
         </li>
     </ul>
