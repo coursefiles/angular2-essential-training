@@ -1,13 +1,18 @@
-import {bootstrap} from 'angular2/platform/browser';
-import {AppComponent} from './app.component';
-import {MediaItemService} from './media-item.service';
-import {provide} from 'angular2/core';
+import { bootstrap } from '@angular/platform-browser-dynamic';
+import { disableDeprecatedForms, provideForms, REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
+import { provide, PLATFORM_DIRECTIVES } from '@angular/core'
 
-var lookupLists = {
+import { AppComponent } from './app.component';
+import { MediaItemService } from './media-item.service';
+
+let lookupLists = {
     mediums: ['Movies', 'Series']
 };
 
-bootstrap(AppComponent, [
-        MediaItemService,
-        provide('LOOKUP_LISTS', { useValue: lookupLists })
-    ]);
+bootstrap(AppComponent, [  
+    disableDeprecatedForms(),
+    provideForms(),
+    { provide: PLATFORM_DIRECTIVES, useValue: REACTIVE_FORM_DIRECTIVES, multi: true },
+    MediaItemService,
+    provide('LOOKUP_LISTS', { useValue: lookupLists })
+  ]);

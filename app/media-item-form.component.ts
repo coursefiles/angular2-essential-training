@@ -1,6 +1,7 @@
-import {Component} from 'angular2/core';
-import {Control, Validators, FormBuilder} from 'angular2/common';
-import {MediaItemService} from './media-item.service';
+import { Component } from '@angular/core';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+
+import { MediaItemService } from './media-item.service';
 
 @Component({
     selector: 'media-item-form',
@@ -8,20 +9,20 @@ import {MediaItemService} from './media-item.service';
     styleUrls: ['app/media-item-form.component.css']
 })
 export class MediaItemFormComponent {
-    form;
+    form: FormGroup;
     
     constructor(private formBuilder: FormBuilder,
         private mediaItemService: MediaItemService) {}
 
     ngOnInit() {
         this.form = this.formBuilder.group({
-            'medium': new Control('Movies'),
-            'name': new Control('', Validators.compose([
+            'medium': this.formBuilder.control('Movies'),
+            'name': this.formBuilder.control('', Validators.compose([
                 Validators.required, 
                 Validators.pattern('[\\w\\-\\s\\/]+')
                 ])),
-            'category': new Control(''),
-            'year': new Control('', this.yearValidator)
+            'category': this.formBuilder.control(''),
+            'year': this.formBuilder.control('', this.yearValidator)
         });
     }
     
