@@ -1,5 +1,7 @@
-import {Component} from 'angular2/core';
-import {MediaItemListComponent} from './media-item-list.component';
+import { Component } from '@angular/core';
+
+import { MediaItemComponent } from './media-item.component';
+import { MediaItemListComponent } from './media-item-list.component';
 
 @Component({
     selector: 'media-tracker-app',
