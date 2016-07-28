@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {Control, Validators, FormBuilder} from 'angular2/common';
+import { Component } from '@angular/core';
+import { FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
     selector: 'media-item-form',
@@ -7,19 +7,19 @@ import {Control, Validators, FormBuilder} from 'angular2/common';
     styleUrls: ['app/media-item-form.component.css']
 })
 export class MediaItemFormComponent {
-    form;
+    form: FormGroup;
     
     constructor(private formBuilder: FormBuilder) {}
 
     ngOnInit() {
         this.form = this.formBuilder.group({
-            'medium': new Control('Movies'),
-            'name': new Control('', Validators.compose([
+            'medium': new FormControl('Movies'),
+            'name': new FormControl('', Validators.compose([
                 Validators.required, 
                 Validators.pattern('[\\w\\-\\s\\/]+')
                 ])),
-            'category': new Control(''),
-            'year': new Control('', this.yearValidator)
+            'category': new FormControl(''),
+            'year': new FormControl('', this.yearValidator)
         });
     }
     
