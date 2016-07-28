@@ -15,5 +15,5 @@ bootstrap(AppComponent, [
     MediaItemService,
     provide(LOOKUP_LISTS, { useValue: lookupLists }),
     HTTP_PROVIDERS,
-    provide(XHRBackend, { useClass: MockXHRBackend }
+    provide(XHRBackend, { useClass: MockXHRBackend })
   ]);
