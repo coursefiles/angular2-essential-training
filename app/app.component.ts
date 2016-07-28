@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { MediaItemListComponent } from './media-item-list.component';
-import {MediaItemFormComponent} from './media-item-form.component';
+import { MediaItemFormComponent } from './media-item-form.component';
 
 @Component({
     selector: 'media-tracker-app',
