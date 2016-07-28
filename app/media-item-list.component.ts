@@ -1,7 +1,8 @@
-import {Component} from 'angular2/core';
-import {MediaItemComponent} from './media-item.component';
-import {CategoryListPipe} from './category-list.pipe';
-import {MediaItemService} from './media-item.service';
+import { Component } from '@angular/core';
+
+import { MediaItemComponent } from './media-item.component';
+import { CategoryListPipe } from './category-list.pipe';
+import { MediaItemService } from './media-item.service';
 
 @Component({
     selector: 'media-item-list',
