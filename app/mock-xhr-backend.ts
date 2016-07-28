@@ -21,13 +21,6 @@ export class MockXHRBackend {
                         var mediaItems;
                         if (medium) {
                             mediaItems = this._mediaItems.filter(mediaItem => mediaItem.medium === medium);
-                            if (mediaItems.length === 0) {
-                                responseOptions = new ResponseOptions({
-                                    body: JSON.stringify({error: 'medium is not valid'}),
-                                    status: 404}
-                                );
-                                responseObserver.error(new Response(responseOptions));
-                            }
                         } else {
                             mediaItems = this._mediaItems;
                         }
