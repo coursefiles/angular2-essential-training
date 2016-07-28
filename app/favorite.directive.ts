@@ -1,4 +1,4 @@
-import {Directive, HostBinding} from 'angular2/core';
+import { Directive, HostBinding } from '@angular/core';
 
 @Directive({
     selector: '[mwFavorite]'
