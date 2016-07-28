@@ -1,6 +1,6 @@
-import {Request, Response, ResponseOptions, RequestMethod} from 'angular2/http';
-import {Observable} from 'rxjs/Observable';
-import {Observer} from 'rxjs/Observer';
+import { Request, Response, ResponseOptions, RequestMethod } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 
 export class MockXHRBackend {
     constructor() {
