@@ -1,12 +1,12 @@
 <header>
     <h2>Add Media to Watch</h2>
 </header>
-<form [ngFormModel]="form" (ngSubmit)="onSubmit(form.value)">
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
     <ul>
         <li>
             <label for="medium">Medium</label>
             <select name="medium" id="medium" required 
-                ngControl="medium">
+                formControlName="medium">
                 <option value="Movies">Movies</option>
                 <option value="Series">Series</option>
             </select>
@@ -14,16 +14,15 @@
         <li>
             <label for="name">Name</label>
             <input type="text" name="name" id="name" required
-                ngControl="name"
-                #name="ngForm">
-            <div *ngIf="name.errors?.pattern" class="error">
+                formControlName="name">
+            <div *ngIf="form.controls.name.erro            <div *ngIf="name.errors?.pattern" class="error">
                 name has invalid characters
             </div>
         </li>
         <li>
             <label for="category">Category</label>
             <select name="category" id="category"
-                ngControl="category">
+                formControlName="category">
                 <option value="Action">Action</option>
                 <option value="Science Fiction">Science Fiction</option>
                 <option value="Comedy">Comedy</option>
@@ -33,11 +32,11 @@
             </select>
         </li>
         <li>
-            <label for="year">Year</label>
-            <input type="text" name="year" id="year" maxlength="4"
-                ngControl="year"
+            <label for="year">Yea"text" name="year" id="year" maxlength="4"
+      ">
+                ngContrform.controls.ol="year"
                 #year="ngForm">
-            <div *ngIf="year.errors?.year" class="error">
+ form.controls.           <div form.controls.*ngIf="year.errors?.year" class="error">
                 must be between {{year.errors?.year.min}} and {{year.errors?.year.max}}
             </div>
         </li>
