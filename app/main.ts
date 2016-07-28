@@ -1,6 +1,6 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { disableDeprecatedForms, provideForms, REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
-import { PLATFORM_DIRECTIVES } from '@angular/core'
+import { PLATFORM_DIRECTIVES } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
