@@ -15,4 +15,3 @@ bootstrap(AppComponent, [
     multi: true
   }
 ]);
-
