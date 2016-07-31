@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   firstMediaItem = {
-  	id: 1,
+    id: 1,
     name: "Firebug",
     medium: "Series",
     category: "Science Fiction",
