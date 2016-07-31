@@ -4,6 +4,7 @@
 	"editor.insertSpaces": true,
 	"files.exclude": {
 		"**/node_modules": {},
+		"npm-debug.log*": {},
 		"typings": {},
 		"app/**/*.js": {},
 		"**/*.map": {},
