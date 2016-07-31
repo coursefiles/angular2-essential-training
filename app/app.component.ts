@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'media-tracker-app',
-    templateUrl: 'app/app.component.html'
+  selector: 'media-tracker-app',
+  templateUrl: 'app/app.component.html'
 })
-export class AppComponent {}
+export class AppComponent { }
