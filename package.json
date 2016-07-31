@@ -9,9 +9,11 @@
   },
   "scripts": {
     "postinstall": "npm run typings install",
+    "clean": "rimraf app/**/*.js app/**/*.js.map",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
+    "prestart": "npm run clean",
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
     "typings": "typings"
   },
@@ -33,6 +35,7 @@
   "devDependencies": {
     "concurrently": "^2.2.0",
     "lite-server": "^2.2.0",
+    "rimraf": "^2.5.4",
     "typescript": "^1.8.10",
     "typings": "^1.0.4"
   }
