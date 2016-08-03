@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 
-import { MediaItemComponent } from './media-item.component';
-
 @Component({
   selector: 'media-item-list',
-  directives: [MediaItemComponent],
   templateUrl: 'app/media-item-list.component.html',
   styleUrls: ['app/media-item-list.component.css']
 })
