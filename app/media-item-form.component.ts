@@ -17,7 +17,7 @@ export class MediaItemFormComponent {
           Validators.pattern('[\\w\\-\\s\\/]+')
         ])),
       category: new FormControl(''),
-      year: new FormControl('', yearValidator)
+      year: new FormControl('', this.yearValidator)
     });
   }
     
