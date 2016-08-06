@@ -13,7 +13,8 @@ let appDirectives = [
   MediaItemComponent,
   MediaItemListComponent,
   MediaItemFormComponent,
-  FavoriteDirective
+  FavoriteDirective,
+  REACTIVE_FORM_DIRECTIVES
 ];
 
 let appPipes = [
@@ -23,7 +24,6 @@ let appPipes = [
 bootstrap(AppComponent, [
   disableDeprecatedForms(),
   provideForms(),
-  REACTIVE_FORM_DIRECTIVES,
   {
     provide: PLATFORM_DIRECTIVES,
     useValue: appDirectives,
