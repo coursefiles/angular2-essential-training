@@ -7,17 +7,17 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['app/media-item-form.component.css']
 })
 export class MediaItemFormComponent {
-  form: FormGroup;
+  form;
 
   ngOnInit() {
     this.form = new FormGroup({
-      'medium': new FormControl('Movies'),
-      'name': new FormControl('', Validators.compose([
+      medium: new FormControl('Movies'),
+      name: new FormControl('', Validators.compose([
           Validators.required, 
           Validators.pattern('[\\w\\-\\s\\/]+')
         ])),
-      'category': new FormControl(''),
-      'year': new FormControl('')
+      category: new FormControl(''),
+      year: new FormControl('')
     });
   }
 
