@@ -1,5 +1,6 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { PLATFORM_DIRECTIVES, PLATFORM_PIPES } from '@angular/core';
+import { REACTIVE_FORM_DIRECTIVES, disableDeprecatedForms, provideForms } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MediaItemComponent } from './media-item.component';
@@ -20,6 +21,9 @@ let appPipes = [
 ];
 
 bootstrap(AppComponent, [
+  disableDeprecatedForms(),
+  provideForms(),
+  REACTIVE_FORM_DIRECTIVES,
   {
     provide: PLATFORM_DIRECTIVES,
     useValue: appDirectives,
