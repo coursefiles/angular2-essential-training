@@ -26,8 +26,11 @@ export class MediaItemFormComponent {
     let year = parseInt(control.value);
     let minYear = 1900;
     let maxYear = 2100;
-    if (year >= minYear && year <= maxYear) return null;
-    return { 'year': true };
+    if (year >= minYear && year <= maxYear) {
+      return null;
+    } else {
+      return { year: true };
+    }
   }
 
   onSubmit(mediaItem) {
