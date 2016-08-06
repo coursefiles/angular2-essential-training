@@ -13,21 +13,21 @@ export class MediaItemFormComponent {
     this.form = new FormGroup({
       medium: new FormControl('Movies'),
       name: new FormControl('', Validators.compose([
-          Validators.required, 
-          Validators.pattern('[\\w\\-\\s\\/]+')
-        ])),
+        Validators.required,
+        Validators.pattern('[\\w\\-\\s\\/]+')
+      ])),
       category: new FormControl(''),
       year: new FormControl('', this.yearValidator)
     });
   }
-    
+
   yearValidator(control) {
     if (control.value.trim().length === 0) return null;
     let year = parseInt(control.value);
     let minYear = 1900;
     let maxYear = 2100;
     if (year >= minYear && year <= maxYear) return null;
-    return {'year': true};
+    return { 'year': true };
   }
 
   onSubmit(mediaItem) {
