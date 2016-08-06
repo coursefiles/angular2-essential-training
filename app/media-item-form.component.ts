@@ -7,14 +7,14 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['app/media-item-form.component.css']
 })
 export class MediaItemFormComponent {
-  form: FormGroup;
+  form;
 
   ngOnInit() {
     this.form = new FormGroup({
-      'medium': new FormControl('Movies'),
-      'name': new FormControl(''),
-      'category': new FormControl(''),
-      'year': new FormControl('')
+      medium: new FormControl('Movies'),
+      name: new FormControl(''),
+      category: new FormControl(''),
+      year: new FormControl('')
     });
   }
 
