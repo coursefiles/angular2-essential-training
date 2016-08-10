@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
 })
 export class MediaItemListComponent {
 
-  onMediaItemDeleted(mediaItem) {
-  }
+  onMediaItemDeleted(mediaItem) { }
 
   mediaItems = [
     {
