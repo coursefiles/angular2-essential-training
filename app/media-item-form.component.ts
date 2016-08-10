@@ -7,7 +7,7 @@ import { FormGroup, Validators, FormBuilder } from '@angular/forms';
   styleUrls: ['app/media-item-form.component.css']
 })
 export class MediaItemFormComponent {
-  form: FormGroup;
+  form;
 
   constructor(private formBuilder: FormBuilder) { }
 
