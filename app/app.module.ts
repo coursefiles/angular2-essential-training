@@ -10,6 +10,10 @@ import { FavoriteDirective } from './favorite.directive';
 import { CategoryListPipe } from './category-list.pipe';
 import { MediaItemService } from './media-item.service';
 
+let lookupLists = {
+  mediums: ['Movies', 'Series']
+};
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -23,7 +27,10 @@ import { MediaItemService } from './media-item.service';
     FavoriteDirective,
     CategoryListPipe
   ],
-  providers: [MediaItemService],
+  providers: [
+    MediaItemService,
+    { provide: 'lookupListToken', useValue: lookupLists }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

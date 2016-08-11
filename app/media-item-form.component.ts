@@ -14,7 +14,7 @@ export class MediaItemFormComponent {
   constructor(
     private formBuilder: FormBuilder,
     private mediaItemService: MediaItemService,
-    @Inject('LOOKUP_LISTS') public lookupLists) { }
+    @Inject('lookupListToken') public lookupList) { }
 
   ngOnInit() {
     this.form = this.formBuilder.group({
