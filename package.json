@@ -1,39 +1,42 @@
 {
-    "name": "angular2-essential-training",
-    "version": "1.0.0",
-    "author": "Justin Schwartzenberger",
-    "description": "This project is the repository for my Angular 2 Essential Training course on Lynda.com.",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/LyndaExerciseFiles/angular2-essential-training.git"
-    },
-    "scripts": {
-        "postinstall": "npm run typings install",
-        "tsc": "tsc",
-        "tsc:w": "tsc -w",
-        "lite": "lite-server",
-        "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
-        "typings": "typings"
-    },
-    "dependencies": {
-        "@angular/common": "2.0.0-rc.4",
-        "@angular/compiler": "2.0.0-rc.4",
-        "@angular/core": "2.0.0-rc.4",
-        "@angular/forms": "0.2.0",
-        "@angular/http": "2.0.0-rc.4",
-        "@angular/platform-browser": "2.0.0-rc.4",
-        "@angular/platform-browser-dynamic": "2.0.0-rc.4",
-        "@angular/router": "3.0.0-beta.2",
-        "systemjs": "0.19.27",
-        "core-js": "^2.4.0",
-        "reflect-metadata": "^0.1.3",
-        "rxjs": "5.0.0-beta.6",
-        "zone.js": "^0.6.12"
-    },
-    "devDependencies": {
-        "concurrently": "^2.2.0",
-        "lite-server": "^2.2.0",
-        "typescript": "^1.8.10",
-        "typings": "^1.0.4"
-    }
+  "name": "angular2-essential-training",
+  "version": "1.0.0",
+  "author": "Justin Schwartzenberger",
+  "description": "This project is the repository for my Angular 2 Essential Training course on Lynda.com.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LyndaExerciseFiles/angular2-essential-training.git"
+  },
+  "scripts": {
+    "postinstall": "npm run typings install",
+    "clean": "rimraf app/**/*.js app/**/*.js.map",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "prestart": "npm run clean",
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "typings": "typings"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.5",
+    "@angular/compiler": "2.0.0-rc.5",
+    "@angular/core": "2.0.0-rc.5",
+    "@angular/forms": "0.3.0",
+    "@angular/http": "2.0.0-rc.5",
+    "@angular/platform-browser": "2.0.0-rc.5",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.5",
+    "@angular/router": "3.0.0-rc.1",
+    "systemjs": "0.19.27",
+    "core-js": "^2.4.0",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "concurrently": "^2.2.0",
+    "lite-server": "^2.2.0",
+    "rimraf": "^2.5.4",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
+  }
 }
