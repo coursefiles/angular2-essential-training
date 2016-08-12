@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { disableDeprecatedForms, provideForms, REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
 import { provide, PLATFORM_DIRECTIVES } from '@angular/core';
@@ -17,3 +18,10 @@ bootstrap(AppComponent, [
     HTTP_PROVIDERS,
     provide(XHRBackend, { useClass: MockXHRBackend })
   ]);
+=======
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+>>>>>>> 06_01b
