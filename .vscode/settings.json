@@ -3,7 +3,9 @@
 	"editor.tabSize": 2,
 	"editor.insertSpaces": true,
 	"files.exclude": {
+		"**/.idea": {},
 		"**/node_modules": {},
+		"npm-debug.log*": {},
 		"typings": {},
 		"app/**/*.js": {},
 		"**/*.map": {},
