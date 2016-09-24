@@ -7,13 +7,17 @@ import { MediaItemListComponent } from './media-item-list.component';
 import { FavoriteDirective } from './favorite.directive';
 
 @NgModule({
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule
+  ],
   declarations: [
     AppComponent,
     MediaItemComponent,
     MediaItemListComponent,
     FavoriteDirective
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
-export class AppModule { }
+export class AppModule {}
