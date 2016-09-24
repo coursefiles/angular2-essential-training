@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'media-tracker-app',
+  selector: 'mw-app',
   templateUrl: 'app/app.component.html',
   styleUrls: ['app/app.component.css']
 })
 export class AppComponent {
+  onMediaItemDelete(mediaItem) {
+    
+  }
+
   firstMediaItem = {
     id: 1,
     name: "Firebug",
@@ -15,8 +19,4 @@ export class AppComponent {
     watchedOn: 1294166565384,
     isFavorite: false
   };
-
-  onMediaItemDeleted(mediaItem) {
-
-  }
 }
