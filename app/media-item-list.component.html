@@ -1,6 +1,6 @@
 <section>
-  <media-item 
+  <mw-media-item 
     *ngFor="let mediaItem of mediaItems"
     [mediaItem]="mediaItem"
-    (delete)="onMediaItemDeleted($event)"></media-item>
+    (delete)="onMediaItemDelete($event)"></mw-media-item>
 </section>

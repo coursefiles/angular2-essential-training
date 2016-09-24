@@ -6,12 +6,16 @@ import { MediaItemComponent } from './media-item.component';
 import { MediaItemListComponent } from './media-item-list.component';
 
 @NgModule({
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule
+  ],
   declarations: [
     AppComponent,
     MediaItemComponent,
     MediaItemListComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
-export class AppModule { }
+export class AppModule {}
