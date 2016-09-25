@@ -20,7 +20,7 @@ input, select {
   border-color: #53ace4;
   padding: 6px;
 }
-.ng-invalid:not(.ng-pristine):not(.required-invalid) {
+.ng-invalid:not(form):not(.ng-pristine):not(.required-invalid) {
   border: 1px solid #d93a3e;
 }
 input[required].ng-invalid {

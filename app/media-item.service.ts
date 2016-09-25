@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class MediaItemService {
-  constructor(private http: Http) { }
+  constructor(private http: Http) {}
 
   get() {
     return this.http.get('mediaitems')
@@ -12,14 +12,14 @@ export class MediaItemService {
         return response.json().mediaItems;
       });
   }
-
+  
   add(mediaItem) {
     this.mediaItems.push(mediaItem);
   }
-
+  
   delete(mediaItem) {
-    var index = this.mediaItems.indexOf(mediaItem);
-    if (index >= 0) {
+    let index = this.mediaItems.indexOf(mediaItem);
+    if(index >= 0) {
       this.mediaItems.splice(index, 1);
     }
   }
