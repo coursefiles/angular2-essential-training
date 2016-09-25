@@ -36,13 +36,13 @@ h2 {
   fill: #bdc2c5;
 }
 .favorite.is-favorite {
-  fill: #37ad79;
+    fill: #37ad79;
 }
 .favorite.is-favorite-hovering {
-  fill: #45bf94;
+    fill: #45bf94;
 }
 .favorite.is-favorite.is-favorite-hovering {
-  fill: #ec4342;
+    fill: #ec4342;
 }
 .delete {
   display: block;
