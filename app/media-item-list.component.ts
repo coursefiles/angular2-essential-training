@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 import { MediaItemService } from './media-item.service';
 
 @Component({
-  selector: 'media-item-list',
+  selector: 'mw-media-item-list',
   templateUrl: 'app/media-item-list.component.html',
   styleUrls: ['app/media-item-list.component.css']
 })
@@ -12,17 +11,13 @@ export class MediaItemListComponent {
   medium = '';
   mediaItems = [];
 
-  constructor(
-    private mediaItemService: MediaItemService,
-    private route: ActivatedRoute) { }
+  constructor(private mediaItemService: MediaItemService) {}
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.getMediaItems(params['medium']);
-    });
+    this.getMediaItems(this.medium);
   }
 
-  onMediaItemDeleted(mediaItem) {
+  onMediaItemDelete(mediaItem) {
     this.mediaItemService.delete(mediaItem)
       .subscribe(() => {
         this.getMediaItems(this.medium);
