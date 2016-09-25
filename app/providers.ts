@@ -1,7 +1,7 @@
 import { OpaqueToken } from '@angular/core';
 
-export let lookupLists = {
+export const lookupListToken = new OpaqueToken('lookupListToken');
+
+export const lookupLists = {
   mediums: ['Movies', 'Series']
 };
-
-export let lookupListToken = new OpaqueToken('LookupList');
