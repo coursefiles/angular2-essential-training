@@ -1,7 +1,10 @@
 # Angular 2 Essential Training
 
-This is the repository for my course, [Angular 2 Essential Training](https://www.lynda.com/AngularJS-tutorials/AngularJS-2-Essential-Training/422834-2.html). 
-The full course is available at [lynda.com](https://lynda.com).  
+This is the repository for my course **Angular 2 Essential Training**  
+The full course is available at [lynda.com](https://lynda.com) and [LinkedIn Learning](https://www.linkedin.com/learning).  
+[Lynda.com subscribers: watch here](https://www.lynda.com/AngularJS-tutorials/Angular-2-Essential-Training/540347-2.html)  
+[LinkedIn Learning subscribers: watch here](https://www.linkedin.com/learning/angular-2-essential-training-2)  
+
 
 ## Course Description
 
