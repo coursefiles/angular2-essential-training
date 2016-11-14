@@ -43,7 +43,7 @@ Topics include:
 
     `npm start`
 
-The repository has a branch for each video starting point. For example, the branch **02-01b** is used as the starting code for the video *02-01 NgModule and the root module*. You can checkout branches using `git checkout <branchname>` and not have to re-run `npm install` each time since you will remain in the same root folder.
+The repository has a branch for each video starting point. For example, the branch **02-01b** is used as the starting code for the video *02-01 NgModule and the root module*. You can checkout branches using `git checkout -b <branchname>` and not have to re-run `npm install` each time since you will remain in the same root folder.
 
 Note that the site will run using `lite-server` and will be served up at the following local address:  
     http://localhost:3000
