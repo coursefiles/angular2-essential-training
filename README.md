@@ -50,6 +50,18 @@ Note that the site will run using `lite-server` and will be served up at the fol
 
 *If you use a code editor that launches its own web server please note that it may run on a different port number. 
 You will want to use `npm start` for this project.*
+
+## FAQ
+If you are getting a list of errors on `npm install` that look like `Cannot find name 'Promise'`, check your `package.json` file and see if the following DevDependencies have a caret in front of the version number (the ^ symbol):
+```json
+"devDependencies": {
+  
+  "@types/core-js": "0.9.34",
+  "@types/node": "6.0.41"
+  
+}
+```
+If the caret is there (would look like `"@types/core-js": "^0.9.34"`) then remove it (or copy the contents of the [package.json](https://github.com/coursefiles/angular2-essential-training/blob/master/package.json) file on the origin repository) and run `npm install` again.
   
 ## More Stuff
 Check out some of my [other courses on lynda.com](https://lynda.com/justinschwartzenberger). 
