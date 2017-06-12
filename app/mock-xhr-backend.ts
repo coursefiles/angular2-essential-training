@@ -8,7 +8,6 @@ export class MockXHRBackend {
 
   createConnection(request: Request) {
     var response = new Observable((responseObserver: Observer<Response>) => {
-      var responseData;
       var responseOptions;
       switch (request.method) {
         case RequestMethod.Get:
@@ -68,6 +67,8 @@ export class MockXHRBackend {
   _getNewId() {
     if (this._mediaItems.length > 0) {
       return Math.max.apply(Math, this._mediaItems.map(mediaItem => mediaItem.id)) + 1;
+    } else {
+      return 1;
     }
   }
 
