@@ -1,8 +1,8 @@
 {
   "name": "angular2-essential-training",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Justin Schwartzenberger",
-  "description": "This project is the repository for my Angular 2 Essential Training course on Lynda.com.",
+  "description": "This project is the repository for my Angular Essential Training course on Lynda.com and LinkedIn Learning.",
   "repository": {
     "type": "git",
     "url": "https://github.com/LyndaExerciseFiles/angular2-essential-training.git"
@@ -16,26 +16,25 @@
     "start": "tsc && concurrently \"tsc -w\" \"lite-server\" "
   },
   "dependencies": {
-    "@angular/common": "2.0.0",
-    "@angular/compiler": "2.0.0",
-    "@angular/core": "2.0.0",
-    "@angular/forms": "2.0.0",
-    "@angular/http": "2.0.0",
-    "@angular/platform-browser": "2.0.0",
-    "@angular/platform-browser-dynamic": "2.0.0",
-    "@angular/router": "3.0.0",
-    "systemjs": "0.19.27",
+    "@angular/common": "5.0.0",
+    "@angular/compiler": "5.0.0",
+    "@angular/core": "5.0.0",
+    "@angular/forms": "5.0.0",
+    "@angular/http": "5.0.0",
+    "@angular/platform-browser": "5.0.0",
+    "@angular/platform-browser-dynamic": "5.0.0",
+    "@angular/router": "5.0.0",
+    "systemjs": "0.19.39",
     "core-js": "2.4.1",
-    "reflect-metadata": "0.1.3",
-    "rxjs": "5.0.0-beta.12",
-    "zone.js": "0.6.23"
+    "rxjs": "5.5.0",
+    "zone.js": "0.8.4"
   },
   "devDependencies": {
     "@types/core-js": "0.9.34",
-    "@types/node": "6.0.41",
+    "@types/node": "6.0.45",
     "concurrently": "2.2.0",
     "lite-server": "2.2.2",
     "rimraf": "2.5.4",
-    "typescript": "2.0.2"
+    "typescript": "2.4.2"
   }
 }
