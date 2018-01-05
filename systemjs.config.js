@@ -9,6 +9,9 @@
     'app': 'app', // 'dist',
 
     '@angular': 'node_modules/@angular',
+    // include bits for HttpClientModule to work (needs to be able to get to @angular/common/http and to tslib)
+    '@angular/common/http': 'node_modules/@angular/common/bundles/common-http.umd.js',
+    'tslib': 'node_modules/tslib/tslib.js',
     'rxjs': 'node_modules/rxjs'
   };
 
