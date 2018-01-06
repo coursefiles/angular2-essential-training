@@ -1,64 +1,63 @@
-import { Request, Response, ResponseOptions, RequestMethod } from '@angular/http';
+import { HttpEvent, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
+import { HttpBackend } from '@angular/common/http/src/backend';
 
-export class MockXHRBackend {
-  constructor() {
-  }
-
-  createConnection(request: Request) {
-    var response = new Observable((responseObserver: Observer<Response>) => {
-      var responseOptions;
+export class MockXHRBackend implements HttpBackend {
+  handle(request: HttpRequest<any>): Observable<HttpEvent<any>> {
+    return new Observable((responseObserver: Observer<HttpResponse<any>>) => {
+      let responseOptions;
       switch (request.method) {
-        case RequestMethod.Get:
-          if (request.url.indexOf('mediaitems?medium=') >= 0 || request.url === 'mediaitems') {
-            var medium;
-            if (request.url.indexOf('?') >= 0) {
-              medium = request.url.split('=')[1];
+        case 'GET':
+          if (request.urlWithParams.indexOf('mediaitems?medium=') >= 0 || request.url === 'mediaitems') {
+            let medium;
+            if (request.urlWithParams.indexOf('?') >= 0) {
+              medium = request.urlWithParams.split('=')[1];
               if (medium === 'undefined') medium = '';
             }
-            var mediaItems;
+            let mediaItems;
             if (medium) {
               mediaItems = this._mediaItems.filter(mediaItem => mediaItem.medium === medium);
             } else {
               mediaItems = this._mediaItems;
             }
-            responseOptions = new ResponseOptions({
-              body: { mediaItems: JSON.parse(JSON.stringify(mediaItems)) },
+            responseOptions = {
+              body: {mediaItems: JSON.parse(JSON.stringify(mediaItems))},
               status: 200
-            });
+            };
           } else {
-            var id = parseInt(request.url.split('/')[1]);
+            let mediaItems;
+            let id = parseInt(request.url.split('/')[1]);
             mediaItems = this._mediaItems.filter(mediaItem => mediaItem.id === id);
-            responseOptions = new ResponseOptions({
+            responseOptions = {
               body: JSON.parse(JSON.stringify(mediaItems[0])),
               status: 200
-            });
+            };
           }
           break;
-        case RequestMethod.Post:
-          var mediaItem = JSON.parse(request.text().toString());
+        case 'POST':
+          let mediaItem = request.body;
           mediaItem.id = this._getNewId();
           this._mediaItems.push(mediaItem);
-          responseOptions = new ResponseOptions({ status: 201 });
+          responseOptions = {status: 201};
           break;
-        case RequestMethod.Delete:
-          var id = parseInt(request.url.split('/')[1]);
+        case 'DELETE':
+          let id = parseInt(request.url.split('/')[1]);
           this._deleteMediaItem(id);
-          responseOptions = new ResponseOptions({ status: 200 });
+          responseOptions = {status: 200};
       }
 
-      var responseObject = new Response(responseOptions);
+      const responseObject = new HttpResponse(responseOptions);
       responseObserver.next(responseObject);
       responseObserver.complete();
-      return () => { };
+      return () => {
+      };
     });
-    return { response };
   }
 
   _deleteMediaItem(id) {
-    var mediaItem = this._mediaItems.find(mediaItem => mediaItem.id === id);
-    var index = this._mediaItems.indexOf(mediaItem);
+    const mediaItem = this._mediaItems.find(mediaItem => mediaItem.id === id);
+    const index = this._mediaItems.indexOf(mediaItem);
     if (index >= 0) {
       this._mediaItems.splice(index, 1);
     }
