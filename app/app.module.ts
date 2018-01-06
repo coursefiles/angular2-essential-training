@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule, XHRBackend } from '@angular/http';
+import { HttpClientModule, HttpXhrBackend } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MediaItemComponent } from './media-item.component';
@@ -18,7 +18,7 @@ import { routing } from './app.routing';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpClientModule,
     routing
   ],
   declarations: [
@@ -32,7 +32,7 @@ import { routing } from './app.routing';
   providers: [
     MediaItemService,
     { provide: lookupListToken, useValue: lookupLists },
-    { provide: XHRBackend, useClass: MockXHRBackend }
+    { provide: HttpXhrBackend, useClass: MockXHRBackend }
   ],
   bootstrap: [
     AppComponent
