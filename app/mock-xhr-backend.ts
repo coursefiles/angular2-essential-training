@@ -36,7 +36,7 @@ export class MockXHRBackend implements HttpBackend {
           }
           break;
         case 'POST':
-          let mediaItem = JSON.parse(request.body);
+          let mediaItem = request.body;
           mediaItem.id = this._getNewId();
           this._mediaItems.push(mediaItem);
           responseOptions = {status: 201};
