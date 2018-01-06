@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class MediaItemService {
-  constructor(private http: Http) {}
+  constructor(private http: HttpClient) {}
 
   get() {
-    return this.http.get('mediaitems')
+    return this.http.get<MediaItemsResponse>('mediaitems')
       .map(response => {
-        return response.json().mediaItems;
+        return response.mediaItems;
       });
   }
   
@@ -68,4 +68,18 @@ export class MediaItemService {
       isFavorite: false
     }
   ];
+}
+
+interface MediaItemsResponse {
+  mediaItems: MediaItem[]
+}
+
+interface MediaItem {
+  id: number;
+  name: string;
+  medium: string;
+  category: string;
+  year: number;
+  watchedOn: number;
+  isFavorite: boolean;
 }
