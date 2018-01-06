@@ -9,10 +9,10 @@ export class MockXHRBackend implements HttpBackend {
       let responseOptions;
       switch (request.method) {
         case 'GET':
-          if (request.url.indexOf('mediaitems?medium=') >= 0 || request.url === 'mediaitems') {
+          if (request.urlWithParams.indexOf('mediaitems?medium=') >= 0 || request.url === 'mediaitems') {
             let medium;
-            if (request.url.indexOf('?') >= 0) {
-              medium = request.url.split('=')[1];
+            if (request.urlWithParams.indexOf('?') >= 0) {
+              medium = request.urlWithParams.split('=')[1];
               if (medium === 'undefined') medium = '';
             }
             let mediaItems;
