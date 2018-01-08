@@ -11,14 +11,13 @@ import { MediaItemService } from './media-item.service';
 export class MediaItemListComponent {
   medium = '';
   mediaItems = [];
-  paramsSubscription;
 
   constructor(
     private mediaItemService: MediaItemService,
     private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
-    this.paramsSubscription = this.activatedRoute.params
+    this.activatedRoute.params
       .subscribe(params => {
         let medium = params['medium'];
         if(medium.toLowerCase() === 'all') {
@@ -26,10 +25,6 @@ export class MediaItemListComponent {
         }
         this.getMediaItems(medium);
       });
-  }
-
-  ngOnDestroy() {
-    this.paramsSubscription.unsubscribe();
   }
 
   onMediaItemDelete(mediaItem) {
