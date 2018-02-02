@@ -19,17 +19,11 @@ export class MediaItemService {
   }
   
   add(mediaItem) {
-    return this.http.post('mediaitems', mediaItem)
-      .pipe(
-        map(response => {})
-      );
+    return this.http.post('mediaitems', mediaItem);
   }
   
   delete(mediaItem) {
-    return this.http.delete(`mediaitems/${mediaItem.id}`)
-      .pipe(
-        map(response => {})
-      );
+    return this.http.delete(`mediaitems/${mediaItem.id}`);
   }
 }
 
