@@ -9,7 +9,7 @@ export class MediaItemService {
   get() {
     return this.http.get<MediaItemsResponse>('mediaitems')
       .pipe(
-        map(response => {
+        map((response: MediaItemsResponse) => {
           return response.mediaItems;
         })
       );
