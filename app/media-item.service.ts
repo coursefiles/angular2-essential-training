@@ -12,7 +12,7 @@ export class MediaItemService {
     };
     return this.http.get<MediaItemsResponse>('mediaitems', getOptions)
       .pipe(
-        map(response => {
+        map((response: MediaItemsResponse) => {
           return response.mediaItems;
         })
       );
