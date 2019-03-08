@@ -5,7 +5,7 @@
   "description": "This project is the repository for my Angular Essential Training course on Lynda.com and LinkedIn Learning.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LyndaExerciseFiles/angular2-essential-training.git"
+    "url": "https://github.com/coursefiles/angular2-essential-training.git"
   },
   "scripts": {
     "clean": "rimraf app/**/*.js app/**/*.js.map",
@@ -32,7 +32,7 @@
     "@types/core-js": "0.9.34",
     "@types/node": "6.0.45",
     "concurrently": "2.2.0",
-    "lite-server": "2.2.2",
+    "lite-server": "2.4.0",
     "rimraf": "2.5.4",
     "typescript": "2.4.2"
   }
