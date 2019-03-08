@@ -1,9 +1,9 @@
 # Angular Essential Training
 
 This is the repository for my course **Angular Essential Training**  
-The full course is available at [lynda.com](https://lynda.com) and [LinkedIn Learning](https://www.linkedin.com/learning).  
-[Lynda.com subscribers: watch here](https://www.lynda.com/AngularJS-tutorials/Angular-2-Essential-Training/540347-2.html)  
+The full course is available at [LinkedIn Learning](https://www.linkedin.com/learning) and [lynda.com](https://lynda.com).  
 [LinkedIn Learning subscribers: watch here](https://www.linkedin.com/learning/angular-2-essential-training-2)  
+[Lynda.com subscribers: watch here](https://www.lynda.com/AngularJS-tutorials/Angular-2-Essential-Training/540347-2.html)  
 
 
 ## Course Description
@@ -29,7 +29,7 @@ Topics include:
 
 2. Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) 
 
-    `git clone https://github.com/LyndaExerciseFiles/angular2-essential-training.git`
+    `git clone https://github.com/coursefiles/angular2-essential-training.git`
     
 3. CD to the folder
 
@@ -64,5 +64,5 @@ If you are getting a list of errors on `npm install` that look like `Cannot find
 If the caret is there (would look like `"@types/core-js": "^0.9.34"`) then remove it (or copy the contents of the [package.json](https://github.com/coursefiles/angular2-essential-training/blob/master/package.json) file on the origin repository) and run `npm install` again.
   
 ## More Stuff
-Check out some of my [other courses on lynda.com](https://lynda.com/justinschwartzenberger). 
-You can also [follow me on twitter](https://twitter.com/schwarty), or read [my blog](http://schwarty.com).
+Check out some of my [other courses on LinkedIn Learning](https://www.linkedin.com/learning/instructors/justin-schwartzenberger?u=2125562). 
+You can also [follow me on twitter](https://twitter.com/schwarty).
