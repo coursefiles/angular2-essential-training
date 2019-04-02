@@ -10,5 +10,6 @@
 		"**/*.js": {
 			"when": "$(basename).ts"
 		}
-	}
+	},
+	"tslint.jsEnable": true
 }
